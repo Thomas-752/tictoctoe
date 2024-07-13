@@ -36,7 +36,18 @@ class TestTicTacToe(unittest.TestCase):
         self.board[2][0] = "X"
         self.assertEqual(check_winner(self.board), "X")
 
-   
+    def test_check_winner_diagonals(self):
+        """Test winning condition in diagonals."""
+        self.board[0][0] = "O"
+        self.board[1][1] = "O"
+        self.board[2][2] = "O"
+        self.assertEqual(check_winner(self.board), "O")
+
+        self.board = [[" " for _ in range(3)] for _ in range(3)]  # Reset board
+        self.board[0][2] = "X"
+        self.board[1][1] = "X"
+        self.board[2][0] = "X"
+        self.assertEqual(check_winner(self.board), "X")
 
 
 if __name__ == "__main__":
