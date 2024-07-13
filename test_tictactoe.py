@@ -15,6 +15,14 @@ class TestTicTacToe(unittest.TestCase):
                       ["X", "O", "O"],
                       ["O", "X", "X"]]
         self.assertTrue(is_board_full(self.board))  # Board is full
+    
+    def test_make_move(self):
+        """Test making a valid move."""
+        self.assertTrue(make_move(self.board, 0, 0, "X"))
+        self.assertEqual(self.board[0][0], "X")
+        self.assertFalse(make_move(self.board, 0, 0, "O"))  # Cell already occupied
+
+    
 
 
 if __name__ == "__main__":
