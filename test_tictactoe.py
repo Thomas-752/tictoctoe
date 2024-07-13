@@ -29,7 +29,14 @@ class TestTicTacToe(unittest.TestCase):
         self.board[1] = ["O", "O", "O"]
         self.assertEqual(check_winner(self.board), "O")
 
-    
+    def test_check_winner_columns(self):
+        """Test winning condition in columns."""
+        self.board[0][0] = "X"
+        self.board[1][0] = "X"
+        self.board[2][0] = "X"
+        self.assertEqual(check_winner(self.board), "X")
+
+   
 
 
 if __name__ == "__main__":
