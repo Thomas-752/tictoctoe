@@ -1,4 +1,11 @@
 
+def is_board_full(board):
+    """Проверяет, заполнена ли доска."""
+    for row in board:
+        if " " in row:
+            return False
+    return True
+
 def make_move(board, row, col, player):
     """Выполняет ход игрока."""
     if board[row][col] == " ":
