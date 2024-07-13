@@ -1,4 +1,10 @@
 
+def print_board(board):
+    """Отображает игровую доску."""
+    for row in board:
+        print(" | ".join(row))
+        print("-" * 9)
+
 def check_winner(board):
     """Проверяет, есть ли победитель."""
     # Проверка строк и столбцов
