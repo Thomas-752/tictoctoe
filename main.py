@@ -1,3 +1,11 @@
+
+def make_move(board, row, col, player):
+    """Выполняет ход игрока."""
+    if board[row][col] == " ":
+        board[row][col] = player
+        return True
+    return False
+
 def get_player_input(player):
     """Получает ввод от игрока."""
     while True:
