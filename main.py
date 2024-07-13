@@ -1,3 +1,16 @@
+def get_player_input(player):
+    """Получает ввод от игрока."""
+    while True:
+        try:
+            row = int(input(f"Игрок {player}, введите номер строки (0-2): "))
+            col = int(input(f"Игрок {player}, введите номер столбца (0-2): "))
+            if row in [0, 1, 2] and col in [0, 1, 2]:
+                return row, col
+            else:
+                print("Неверный ввод. Пожалуйста, введите числа от 0 до 2.")
+        except ValueError:
+            print("Неверный ввод. Пожалуйста, введите числа.")
+
 def play_game():
     """Основная функция для игры."""
     board = [[" " for _ in range(3)] for _ in range(3)]
