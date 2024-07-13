@@ -1,1 +1,1 @@
-I write this simple game for my homewoel.
+I write this simple game for my homework.
