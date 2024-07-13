@@ -22,6 +22,13 @@ class TestTicTacToe(unittest.TestCase):
         self.assertEqual(self.board[0][0], "X")
         self.assertFalse(make_move(self.board, 0, 0, "O"))  # Cell already occupied
 
+    def test_check_winner_rows(self):
+        """Test winning condition in rows."""
+        self.board[0] = ["X", "X", "X"]
+        self.assertEqual(check_winner(self.board), "X")
+        self.board[1] = ["O", "O", "O"]
+        self.assertEqual(check_winner(self.board), "O")
+
     
 
 
